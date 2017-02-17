@@ -1,3 +1,6 @@
+<?php
+/**/
+?>
 <html>
 <head>
 <title>iTApplication</title>
@@ -5,7 +8,8 @@
 </head>
 <body>
 <h1>PHP-MySQL developer, Drupal, WordPRess, Bootstrap expert, Theme and Template designer, Mobile app and Web App developer.</h2>
-Under construction. <br />
-Site will be update very soon... 
+<?php echo 'Under construction. <br />
+Site will be update very soon... ';
+?>
 </body>
 </html>

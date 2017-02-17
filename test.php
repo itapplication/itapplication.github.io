@@ -1,5 +1,5 @@
 <?php
-/**/
+/* PHP files are not supported on github.io */
 ?>
 <html>
 <head>

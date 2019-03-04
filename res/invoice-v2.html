@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Invoice</title>
+    
+    <style>
+		.col-12.to{padding:8px 5%;}
+		input{border:0;}
+		input#to{border-bottom:1px solid #555; width:80%;}
+		#itemstable .container div{border:1px solid #ddd;}
+		#itemstable .tableheader{font-weight:900; background:#eee;}
+		#itemstable input{width:98%;}
+		.row.total{border-top:5px double #aaa !important;}
+		textarea{border:0;}
+		.red{color:#f00; font-size:0.8em;}
+		.thankyou{text-align:center;}
+		#invoiceform{margin-bottom:1em; padding-bottom:1em;}
+		.fleft{float:left;}
+    </style>
+
+  </head>
+  <body>
+	<form action="" id="invoiceform" onsubmit="return;">  
+    <section class="" id="">
+		<div class="container">
+			<div class="row">
+			 <div class="col-12"><h1>Invoice</h1></div>
+			 <div class="col-12 col-md-8">
+			
+			 </div>
+			 <div class="col-12 col-md-4">
+			  <h2>itApplication.net</h2>
+			  Shivai bungalow, Pipeline road,<br />
+			  Gulmohar vihar colony,<br />
+			  Nashik, Maharashtra, India.<br />
+			  Pin code:- 422007<br />
+			  Email : shiv@itapplication.net<br />
+			  Phone : 8999790232<br />
+			 </div>
+			</div><!-- /.row -->
+			<div class="row">
+			<div class="col-12 to">
+			 <label>To -</label><input type="text"  name="to" id="to" />
+			</div>
+			<div class="col-12 col-md-8">
+			 <label class="fleft">Invoice No : </label> &nbsp;&nbsp;<span id="invoicenumber"></span><!-- <input type="text" name="invoicenumber" id="invoicenumber" /> -->
+			</div>
+			<div class="col-12 col-md-4">
+			 <label>Date: </label>&nbsp;<span id="invoicedate"></span>
+			</div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>
+	<section class="table" id="itemstable" style="">
+		<div class="container" style="border:1px solid #555;">
+		 
+			<div class="row tableheader">
+			 <div class="col-12 col-md-5">
+			  Description 
+			 </div>
+			 <div class="col-12 col-md-2">
+			  Rate 
+			 </div>
+			 <div class="col-12 col-md-1">
+			  Duration 
+			 </div>
+			 <div class="col-12 col-md-2">
+			  Discount 
+			 </div>
+			 <div class="col-12 col-md-2">
+			  Amount
+			 </div>
+			</div><!-- /.row -->
+			<div class="row data">
+			 <div class="col-12 col-md-5 desc1">
+			  <input type="text"  name="desc1" id="desc1" />
+			 </div>
+			 <div class="col-12 col-md-2 rate1">
+			  <input type="text"  name="rate1" id="rate1" />
+			 </div>
+			 <div class="col-12 col-md-1 duration1">
+			  <input type="text"  name="duration1" id="duration1"  />
+			 </div>
+			 <div class="col-12 col-md-2 discount1">
+			  <input type="text"  name="discount1" id="discount1" />
+			 </div>
+			 <div class="col-12 col-md-2 total1 rowtotal">			  
+			  <span id="total1"></span>
+			 </div>			 
+			</div><!-- /.row -->
+			<div class="row data">
+			 <div class="col-12 col-md-5 desc2">
+			  <input type="text"  name="desc2" id="desc2" />
+			 </div>
+			 <div class="col-12 col-md-2 rate2">
+			  <input type="text"  name="rate2" id="rate2" />
+			 </div>
+			 <div class="col-12 col-md-1 duration2">
+			  <input type="text"  name="duration2" id="duration2" />
+			 </div>
+			 <div class="col-12 col-md-2 discount2">
+			  <input type="text"  name="discount2" id="discount2" />
+			 </div>
+			 <div class="col-12 col-md-2 total2 rowtotal">
+			  <span id="total2"></span>
+			 </div>			 
+			</div><!-- /.row -->
+			<div class="row data">
+			 <div class="col-12 col-md-5 desc3">
+			  <input type="text"  name="desc3" id="desc3" />
+			 </div>
+			 <div class="col-12 col-md-2 rate3">
+			  <input type="text"  name="rate3" id="rate3" />
+			 </div>
+			 <div class="col-12 col-md-1 duration3">
+			  <input type="text"  name="duration3" id="duration3" />
+			 </div>
+			 <div class="col-12 col-md-2 discount3">
+			  <input type="text"  name="discount3" id="discount3" />
+			 </div>
+			 <div class="col-12 col-md-2 total3 rowtotal">
+			  <span id="total3"></span>
+			 </div>			 
+			</div><!-- /.row -->
+			<div class="row data">
+			 <div class="col-12 col-md-5 desc4">
+			  <input type="text"  name="desc4" id="desc4" />
+			 </div>
+			 <div class="col-12 col-md-2 rate4">
+			  <input type="text"  name="rate4" id="rate4" />
+			 </div>
+			 <div class="col-12 col-md-1 duration4">
+			  <input type="text"  name="duration4" id="duration4" />
+			 </div>
+			 <div class="col-12 col-md-2 discount4">
+			  <input type="text"  name="discount4" id="discount4" />
+			 </div>
+			 <div class="col-12 col-md-2 total4 rowtotal">
+			  <span id="total4"></span>
+			 </div>			 
+			</div><!-- /.row -->
+			<div class="row total">
+			 <div class="col-sm-6 col-md-10">
+			  <button type="button" id="totalamountbutton" name='TotalAmount' onclick="calculateTotal()" style="float:right;margin-right:11%;">Total Amount</button>
+			 </div>
+			 <div class="col-sm-6 col-md-2 totalamount">
+			  <b><span id="totalamount"></span></b>
+			 </div>
+			</div><!-- /.row -->
+		 	
+		</div><!-- /.container -->
+	</section><!-- /#itemstable -->	
+	<section class="" id="">
+		<div class="container">
+			<div class="row">
+			 <div class="col">
+			  <textarea rows="5" cols="70">
+ Registration period: xx Month xxxx to xx Month xxxx
+ New expire date will be xx Month xxxx. 
+ 		  
+Please renew before the registration expires.
+			  </textarea>
+			 </div>
+			</div><!-- /.row -->
+			<div class="row">
+			 <div class="col-12 col-sm-8">
+			  <p><span style="font-weight:bold; font-size:1.5em; color:#000;">Payment Status: <select>
+			   <option>Unpaid</option>
+			   <option>Paid</option>
+			  </select></span><br />
+			  <label class="fleft">Payment Details:</label><input type="text" name="paymentdetails" id="paymentdetails" value="Unpaid" style="width:82%; margin-left:4px;"/>
+			  </p>
+<span class="red">Terms and condition apply.</span><br />
+This is a computer generated document. No signature is required.
+			 </div>
+			 <div class="col-12 col-sm-4 thankyou">
+			  Thank You.<br />
+			  <br />
+			  Shivcharan Patil
+			 </div>
+			</div><!-- /.row -->
+		</div><!-- /.container -->
+	</section>
+	</form>	
+	
+	    <script>    
+		 var today = new Date();
+		 var dd = today.getDate();
+		 var mm = today.getMonth() + 1; //January is 0!
+		 var yyyy = today.getFullYear();
+		 var yy = yyyy.toString().substr(-2);
+		 var hh = today.getHours();
+		 var minut = today.getMinutes();
+		 if (dd < 10) {
+			dd = '0' + dd;
+		}
+
+		if (mm < 10) {
+			mm = '0' + mm;
+		}
+		if (minut < 10) {
+			minut = '0' + minut;
+		}
+		 today = mm + '/' + dd + '/' + yyyy;
+		 invoicenum = yy + mm + dd + hh + minut;
+		 document.getElementById("invoicedate").innerHTML = today;
+		 document.getElementById("invoicenumber").innerHTML = invoicenum;	
+    </script>
+        <script>
+		function calculateTotal(){
+		var theForm = document.forms["invoiceform"];
+		var rate1 = theForm.elements["rate1"];
+		var rate1int = parseInt(rate1.value);
+		
+		var rate2 = theForm.elements["rate2"];
+		var rate2int = parseInt(rate2.value);
+		if (isNaN(rate2int)){rate2int = '0'}
+		
+		var rate3 = theForm.elements["rate3"];
+		var rate3int = parseInt(rate3.value);
+		if (isNaN(rate3int)){rate3int = '0'}
+		
+		var rate4 = theForm.elements["rate4"];
+		var rate4int = parseInt(rate4.value);
+		if (isNaN(rate4int)){rate4int = '0'}
+		
+		var duration1 = theForm.elements["duration1"];
+		var duration1int = parseInt(duration1.value);
+		if (isNaN(duration1int)){duration1int = '0'}
+		
+		var duration2 = theForm.elements["duration2"];
+		var duration2int = parseInt(duration2.value);
+		if (isNaN(duration2int)){duration2int = '0'}
+		
+		var duration3 = theForm.elements["duration3"];
+		var duration3int = parseInt(duration3.value);
+		if (isNaN(duration3int)){duration3int = '0'}
+		
+		var duration4 = theForm.elements["duration4"];
+		var duration4int = parseInt(duration4.value);
+		if (isNaN(duration4int)){duration4int = '0'}
+		
+		var discount1 = theForm.elements["discount1"];	
+		var discount1int = parseInt(discount1.value);
+		if (isNaN(discount1int)){discount1int = '0'}	
+		
+		var discount2 = theForm.elements["discount2"];
+		var discount2int = parseInt(discount2.value);
+		if (isNaN(discount2int)){discount2int = '0'}
+		
+		var discount3 = theForm.elements["discount3"];
+		var discount3int = parseInt(discount3.value);
+		if (isNaN(discount3int)){discount3int = '0'}
+		
+		var discount4 = theForm.elements["discount4"];
+		var discount4int = parseInt(discount4.value);
+		if (isNaN(discount4int)){discount4int = '0'}
+		
+		var total1 = (rate1int * duration1int) - ((rate1int * duration1int)*discount1int/100);
+		var total2 = (rate2int * duration2int) - ((rate2int * duration2int)*discount2int/100);
+		var total3 = (rate3int * duration3int) - ((rate3int * duration3int)*discount3int/100);
+		var total4 = (rate4int * duration4int) - ((rate4int * duration4int)*discount4int/100);
+		var totalamount = total1 + total2 + total3 + total4;
+		
+		document.getElementById('total1').innerHTML = total1;
+		document.getElementById('total2').innerHTML = total2;
+		document.getElementById('total3').innerHTML = total3;
+		document.getElementById('total4').innerHTML = total4;
+		document.getElementById('totalamount').innerHTML = totalamount;
+
+		}
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

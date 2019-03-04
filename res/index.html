@@ -17,8 +17,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100|Work+Sans:100" rel="stylesheet">
-	<link rel="stylesheet" href="res/style.css">
-    <title><?php pageTitle(); ?> | <?php siteName(); ?></title>
+	<link rel="stylesheet" href="style.css">
+    <title>Home page</title>
     
     <script>
 function includeHTML() {
@@ -52,7 +52,7 @@ function includeHTML() {
 
   </head>
   <body>
-    <section id="navigation" class="nav bar" w3-include-html="res/navbar.html">
+    <section id="navigation" class="nav bar" w3-include-html="navbar.html">
 	</section>
     <section id="content" class="page content">
 	 <div class="container">
@@ -70,17 +70,17 @@ function includeHTML() {
 		</p>        
        </article>
        
-       <aside class="col col-md-3" w3-include-html="res/sidebar.html">
+       <aside class="col col-md-3" w3-include-html="sidebar.html">
        </aside>
        
 	  </main><!-- /.row -->
 	 </div><!-- /.container -->
 	</section>
 	
-    <footer w3-include-html="res/footer.html">
+    <footer w3-include-html="footer.html">
     </footer>
     
 	<script>includeHTML();</script>
-	<div w3-include-html="res/add-js.html"></div>
+	<div w3-include-html="add-js.html"></div>
   </body>
 </html>
